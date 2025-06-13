@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Github, Linkedin, Code, Database, Server, Palette } from "lucide-react";
+import { Facebook, Github, Linkedin, Code, Database, Server, Palette, } from "lucide-react";
 import Hero from "../images/Hero.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -79,29 +79,6 @@ function Home() {
           </motion.div>
         </div>
       </div>
-
-      {/* Tech Stack Section */}
-      <motion.div className="mt-20 text-center w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }}>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#4169E1]">My Tech Stack</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div className="flex flex-col items-center">
-            <Code className="w-14 h-14 text-white" />
-            <span className="mt-2 text-lg font-semibold">React.js</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <Palette className="w-14 h-14 text-white" />
-            <span className="mt-2 text-lg font-semibold">Tailwind CSS</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <Database className="w-14 h-14 text-white" />
-            <span className="mt-2 text-lg font-semibold">MySQL</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <Server className="w-14 h-14 text-white" />
-            <span className="mt-2 text-lg font-semibold">Node.js</span>
-          </div>
-        </div>
-      </motion.div>
     </div>
   );
 }

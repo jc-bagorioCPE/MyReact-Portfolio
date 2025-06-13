@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-function Contact({ className = "" }) { // ⬅️ accept className as a prop
+function Contact({ className = "" }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (e) => {
@@ -30,14 +30,35 @@ function Contact({ className = "" }) { // ⬅️ accept className as a prop
     }
   };
 
+  const containerVariants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 60, damping: 20, duration: 0.8 },
+    },
+  };
+
+  const formVariants = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { delay: 0.1, duration: 0.4, ease: "easeOut" },
+    },
+  };
+
   return (
     <motion.div
-      className={`min-h-screen w-screen bg-[#1F1F1F] text-white flex flex-col items-center px-6 mt-0  ${className}`} // ⬅️ inject className here
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      className={`min-h-screen w-screen bg-[#1F1F1F] text-white flex flex-col items-center px-6 mt-0 ${className}`}
+      initial={false}
+      animate="visible"
+      variants={containerVariants}
     >
-      <div className="w-full max-w-lg bg-[#2A2A2A] p-8 rounded-lg shadow-lg text-center mt-20">
+      <motion.div
+        className="w-full max-w-lg bg-[#2A2A2A] p-8 rounded-lg shadow-lg text-center mt-20"
+        initial={false}
+        animate="visible"
+        variants={formVariants}
+      >
         <h1 className="text-4xl font-bold text-[#4169E1]">Contact Me</h1>
         <p className="mt-4 text-gray-300">
           Feel free to reach out! I’d love to connect and discuss new opportunities.
@@ -76,12 +97,12 @@ function Contact({ className = "" }) { // ⬅️ accept className as a prop
 
           <button
             type="submit"
-            className="px-6 py-3 bg-[#4169E1] text-white font-semibold rounded-md hover:bg-blue-700 transition"
+            className="px-6 py-3 bg-[#4169E1] text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
           >
             Send Message
           </button>
         </form>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

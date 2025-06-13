@@ -1,16 +1,15 @@
 import About from "../pages/About"
 import Project from "../components/ProjectCarousel"
-import Contact from "../pages/Contact"
 import Home from "../pages/Home";
-
+import Techstack from "@/components/Techstack";
 
 function HeroSection() {
   return (
     <>
-        <Home />
-        <About />
-        <Project className="mt-0" />
-        <Contact className="mt-0"/>
+      <div id="home"><Home /></div>
+      <div id="about"><About /></div>
+      <div id="project"><Project /></div>
+      <div id="techstack"><Techstack /></div>
     </>
   );
 }
