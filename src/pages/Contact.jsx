@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 function Contact({ className = "" }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -30,35 +29,11 @@ function Contact({ className = "" }) {
     }
   };
 
-  const containerVariants = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", stiffness: 60, damping: 20, duration: 0.8 },
-    },
-  };
-
-  const formVariants = {
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { delay: 0.1, duration: 0.4, ease: "easeOut" },
-    },
-  };
-
   return (
-    <motion.div
+    <div
       className={`min-h-screen w-screen bg-[#1F1F1F] text-white flex flex-col items-center px-6 mt-0 ${className}`}
-      initial={false}
-      animate="visible"
-      variants={containerVariants}
     >
-      <motion.div
-        className="w-full max-w-lg bg-[#2A2A2A] p-8 rounded-lg shadow-lg text-center mt-20"
-        initial={false}
-        animate="visible"
-        variants={formVariants}
-      >
+      <div className="w-full max-w-lg bg-[#2A2A2A] p-8 rounded-lg shadow-lg text-center mt-20">
         <h1 className="text-4xl font-bold text-[#4169E1]">Contact Me</h1>
         <p className="mt-4 text-gray-300">
           Feel free to reach out! I’d love to connect and discuss new opportunities.
@@ -102,8 +77,8 @@ function Contact({ className = "" }) {
             Send Message
           </button>
         </form>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
 

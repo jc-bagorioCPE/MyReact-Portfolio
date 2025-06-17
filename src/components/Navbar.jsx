@@ -3,6 +3,7 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Menu, X, CodeXml } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();

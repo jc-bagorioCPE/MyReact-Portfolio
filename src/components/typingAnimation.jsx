@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const TypingAnimation = () => {
-  const text = "Hello, welcome to my website!";
+  const text = "Welcome to my website!";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 

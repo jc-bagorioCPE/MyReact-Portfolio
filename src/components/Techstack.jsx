@@ -11,7 +11,6 @@ import {
   Boxes,
   TerminalSquare,
 } from "lucide-react";
-import { motion } from "framer-motion";
 
 const techItems = [
   { name: "React.js", icon: <Code className="w-12 h-12 text-[#4169E1]" /> },
@@ -28,12 +27,7 @@ const techItems = [
 
 const Techstack = () => {
   return (
-    <motion.section
-      className="w-full bg-[#1F1F1F] text-white py-20 px-6 flex flex-col items-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
-    >
+    <section className="w-full bg-[#1F1F1F] text-white py-20 px-6 flex flex-col items-center">
       <h2 className="text-3xl md:text-4xl font-bold text-[#4169E1] mb-12">
         My Tech Stack
       </h2>
@@ -49,7 +43,7 @@ const Techstack = () => {
           </div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
 
