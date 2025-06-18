@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./Routes/HeroSection";
 import Contact from "./pages/Contact";
-import AboutMe from "./pages/Aboutme";
+import AboutMe from "./pages/AboutMe";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
