@@ -69,6 +69,11 @@ button:focus-visible {
   }
 }
 
+/* Prevent scrollbar shift when dialog opens */
+html {
+  scrollbar-gutter: stable;
+}
+
 
 
 @layer base {

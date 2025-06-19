@@ -10,8 +10,8 @@ function HeroSection() {
       <div className="w-full h-full">
       <div id="home"><Home /></div>
       <div id="about"><About /></div>
-      <div id="project"><Project /></div>
-      <div id="techstack"><Techstack /></div>
+      <div id="project" className="bg-[#1F1F1F] min-h-screen pt-20"><Project /></div>
+      <div id="techstack" className="bg-[#1F1F1F] min-h-screen pt-20"><Techstack /></div>
       <div><Footer /></div>
       </div>
     </>
